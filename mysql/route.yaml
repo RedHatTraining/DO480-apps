@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: frontend
+spec:
+  host: todo.apps.ocp4.example.com
+    #path: "/test" 
+  to:
+    kind: Service
+    name: frontend
