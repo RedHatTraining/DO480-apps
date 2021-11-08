@@ -1,4 +1,4 @@
 resources:
-  #- service.yaml
-  #- deployment.yaml
-  #- route.yaml
+  - service.yaml
+  - deployment.yaml
+  - route.yaml
