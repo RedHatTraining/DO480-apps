@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: frontend
 spec:
-  host: todo.apps.ocp4.example.com
+  host: todo.apps.ocp4.example.com/todo/
     #path: "/test" 
   to:
     kind: Service
