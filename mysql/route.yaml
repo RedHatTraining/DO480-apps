@@ -1,10 +1,15 @@
-apiVersion: v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
   name: frontend
 spec:
-  hostname: todo.apps.ocp4-mng.example.com/todo
-    #path: "/test" 
+  host: todo.apps.ocp4-mng.example.com/todo
   to:
     kind: Service
     name: frontend
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
