@@ -4,11 +4,13 @@ metadata:
   labels:
     app: todonodejs
     name: route-frontend
-      #name: frontend
+  name: frontend
   namespace: mysql
 spec:
-  host: todo.apps.ocp4-mng.example.com/todo
-    #path: "/test"
+  host: todo.apps.ocp4-mng.example.com
+  path: "/todo"
   to:
     kind: Service
     name: frontend
+    weight: 100
+  wildcardPolicy: None
