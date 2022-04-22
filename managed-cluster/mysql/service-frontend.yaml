@@ -4,9 +4,9 @@ metadata:
   labels:
     app: todonodejs
     name: frontend
-  name: frontend
+  name: frontend-prod
 spec:
   ports:
   - port: 8080
   selector:
-    name: frontend
+    name: frontend-prod

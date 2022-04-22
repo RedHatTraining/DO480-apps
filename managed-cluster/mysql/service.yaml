@@ -4,9 +4,9 @@ metadata:
   labels:
     app: todonodejs
     name: mysql
-  name: mysql
+  name: mysql-prod
 spec:
   ports:
   - port: 3306
   selector:
-    name: mysql
+    name: mysql-prod
