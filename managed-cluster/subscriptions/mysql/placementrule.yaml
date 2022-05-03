@@ -1,0 +1,31 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: mysql-development
+  labels:
+    app: mysql
+spec:
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  clusterSelector:
+    matchLabels:
+      usage: development
+  #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: mysql-production
+  namespace: mysql
+  labels:
+    app: mysql
+spec:
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  clusterSelector:
+    matchLabels:
+      usage: production
+  #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL

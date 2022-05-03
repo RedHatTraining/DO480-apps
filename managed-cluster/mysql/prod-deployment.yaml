@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql
+  name: mysql-prod
   labels:
     app: todonodejs
     name: mysql
@@ -18,7 +18,7 @@ spec:
         name: mysql
     spec:
       containers:
-      - image: registry.redhat.io/rhel8/mysql-80:1
+      - image: registry.redhat.io/rhel8/mysql-80:1-156
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
@@ -39,17 +39,5 @@ spec:
       - name: db-volume
         emptyDir: {}
       - name: db-init
-        emptyDir: {}
+        emptyDir: {}  
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: todonodejs
-    name: mysql
-  name: mysql
-spec:
-  ports:
-  - port: 3306
-  selector:
-    name: mysql
