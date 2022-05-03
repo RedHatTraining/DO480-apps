@@ -5,7 +5,11 @@ bases:
   - ../../base
 
 resources:
-- dbclaim-pvc.yaml
+  - dbclaim-pvc.yaml
+
+  replicas:
+  - name: mysql
+    count: 3
 
 #Add name prefix "prod"
 namePrefix: prod-
