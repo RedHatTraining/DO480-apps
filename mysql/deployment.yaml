@@ -18,7 +18,6 @@ spec:
         name: mysql
     spec:
       containers:
-              #- image: registry.redhat.io/rhel8/mysql-80
       - image: registry.redhat.io/rhel8/mysql-80:1-152
         name: mysql
         env:
