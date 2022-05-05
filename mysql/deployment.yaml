@@ -18,7 +18,8 @@ spec:
         name: mysql
     spec:
       containers:
-      - image: registry.redhat.io/rhel8/mysql-80:1-156
+              #- image: registry.redhat.io/rhel8/mysql-80
+      - image: registry.redhat.io/rhel8/mysql-80:1-152
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
@@ -32,12 +33,12 @@ spec:
         ports:
         - containerPort: 3306
           name: mysql
-        volumeMounts:
+       volumeMounts:
         - mountPath: "/var/lib/mysql"
           name: db-volume
       volumes:
       - name: db-volume
         emptyDir: {}
       - name: db-init
-        emptyDir: {}  
+        emptyDir: {}
 ---
