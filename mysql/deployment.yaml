@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -32,12 +33,11 @@ spec:
         ports:
         - containerPort: 3306
           name: mysql
-       volumeMounts:
-        - mountPath: "/var/lib/mysql"
-          name: db-volume
+        volumeMounts:
+          - mountPath: "/var/lib/mysql"
+            name: db-volume
       volumes:
       - name: db-volume
         emptyDir: {}
       - name: db-init
         emptyDir: {}
----
