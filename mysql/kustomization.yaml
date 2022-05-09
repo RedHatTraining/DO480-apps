@@ -10,3 +10,4 @@ resources:
   - service-frontend.yaml
   - route.yaml
   - route-mng.yaml
+  - placementrule.yaml
