@@ -9,4 +9,3 @@ resources:
   - service.yaml
   - service-frontend.yaml
   - route.yaml
-  - placementrule.yaml
