@@ -2,40 +2,6 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
   annotations:
-    apps.open-cluster-management.io/deployables: 'mysql/mysql-subscription-1-mysql-mysql-service,mysql/mysql-subscription-1-mysql-frontend-route,mysql/mysql-subscription-1-mysql-frontend-service,mysql/mysql-subscription-1-mysql-frontend-deployment'
-    apps.open-cluster-management.io/git-branch: main
-    apps.open-cluster-management.io/git-path: mysql
-    apps.open-cluster-management.io/reconcile-option: merge
-  labels:
-    app: mysql
-    app.kubernetes.io/part-of: mysql
-    apps.open-cluster-management.io/reconcile-rate: medium
-  name: mysql-subscription-1
-  namespace: mysql
-spec:
-  channel: ggithubcom-mjarrett0-do480-apps-ns/ggithubcom-mjarrett0-do480-apps
-  placement:
-    placementRef:
-      kind: PlacementRule
-      name: mysql-placement-1
-  secondaryChannel: ''
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  labels:
-    app: mysql
-  name: mysql-placement-1
-  namespace: mysql
-spec:
-  clusterSelector:
-    matchLabels:
-      env: development
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: Subscription
-metadata:
-  annotations:
     apps.open-cluster-management.io/deployables: 'mysql/mysql-subscription-2-mysql-frontend-route,mysql/mysql-subscription-2-mysql-frontend-service,mysql/mysql-subscription-2-mysql-mysql-service,mysql/mysql-subscription-2-mysql-frontend-deployment,mysql/mysql-subscription-2-mysql-mysql-deployment'
     apps.open-cluster-management.io/git-branch: production
     apps.open-cluster-management.io/git-path: mysql
@@ -52,7 +18,6 @@ spec:
     placementRef:
       kind: PlacementRule
       name: mysql-placement-2
-  secondaryChannel: ''
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
