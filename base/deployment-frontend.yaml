@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: todonodejs
+    name: frontend
+  namespace: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todonodejs
+      name: frontend
+  template:
+    metadata:
+      labels:
+        app: todonodejs
+        name: frontend
+    spec:
+      containers:
+      - resources:
+          limits:
+            cpu: '0.5'
+        image: quay.io/redhattraining/todo-single:v1.0
+        name: todonodejs
+        ports:
+        - containerPort: 8080
+          name: nodejs-http
+        env:
+        - name: MYSQL_ENV_MYSQL_DATABASE
+          value: items
+        - name: MYSQL_ENV_MYSQL_USER
+          value: user1
+        - name: MYSQL_ENV_MYSQL_PASSWORD
+          value: mypa55
+        - name: APP_PORT
+          value: '8080'
+---
