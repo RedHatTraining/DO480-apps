@@ -18,6 +18,7 @@ spec:
     placementRef:
       kind: PlacementRule
       name: mysql-placement-2
+
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
@@ -31,4 +32,3 @@ spec:
   clusterSelector:
     matchLabels:
       env: production
-
