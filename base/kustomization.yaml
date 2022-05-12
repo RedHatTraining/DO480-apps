@@ -3,11 +3,11 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - subscription.yaml
+    #- subscription.yaml
   - application.yaml
   - deployment-frontend.yaml
   - deployment.yaml
   - service.yaml
   - service-frontend.yaml
   - route.yaml
-  - placementrule.yaml
+    #  - placementrule.yaml
