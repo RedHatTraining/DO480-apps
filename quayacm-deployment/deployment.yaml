@@ -19,11 +19,9 @@ spec:
         name: budget-app
     spec:
       containers:
-      - image: central-quay-registry.apps.ocp4.example.com/finance/budget-app-dev:latest
+      - image: IMAGE_NAME
         name: budget-app
         ports:
         - containerPort: 8080
           name: budget-app
-      imagePullSecrets:
-        - name: finance-dev-deployer-pull-secret
 ---
