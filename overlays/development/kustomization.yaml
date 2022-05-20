@@ -9,6 +9,6 @@ resources:
 namePrefix: dev-
 images: 
   - name: mysql
-    newName: dev.registry.redhat.io/rhel8/mysql-80
+    newName: registry.redhat.io/rhel8/mysql-80
     newTag: 1-152
 
