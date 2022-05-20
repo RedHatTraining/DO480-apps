@@ -19,8 +19,8 @@ spec:
         name: mysql
     spec:
       containers:
-      - image: cluster-mysql
-        name: mysql
+      - image: mysql
+        name: cluster-mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: r00tpa55
