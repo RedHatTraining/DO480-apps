@@ -7,3 +7,8 @@ bases:
 resources:
   - dbclaim-pvc.yaml
 namePrefix: dev-
+images: 
+  - name: mysql
+    newname: dev.registry.redhat.io/rhel8/mysql-80
+    tag: 1-152
+
