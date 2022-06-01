@@ -8,8 +8,7 @@ resources:
   - dbclaim-pvc.yaml
   - route.yaml
 namePrefix: dev-
-#images: 
-# - name: mysql
-#   newName: registry.redhat.io/rhel8/mysql-80
-#   newTag: 1-152
-
+images: 
+ - name: mysql
+   newName: registry.redhat.io/rhel8/mysql-80
+   newTag: 1-152
