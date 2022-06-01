@@ -39,4 +39,4 @@ spec:
       volumes:
       - name: db-volume
         persistentVolumeClaim:
-          claimName: dev-mysql-pv-claim
+          claimName: mysql-pv-claim
