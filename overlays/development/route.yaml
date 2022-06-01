@@ -3,7 +3,7 @@ kind: Route
 metadata:
   labels:
     app: todonodejs
-    name: route-frontend
+    name: frontend
   name: frontend
   #namespace: mysql
 spec:
