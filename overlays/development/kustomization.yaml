@@ -4,6 +4,8 @@ kind: Kustomization
 bases:
   - ../../base
 
+namePrefix: dev-
+
 resources:
   - dbclaim-pvc.yaml
   - route.yaml
@@ -13,4 +15,3 @@ images:
    newName: registry.redhat.io/rhel8/mysql-80
    newTag: 1-152
    
-namePrefix: dev-
