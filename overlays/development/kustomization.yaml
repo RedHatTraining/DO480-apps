@@ -4,7 +4,7 @@ kind: Kustomization
 bases:
   - ../../base
 
-namePrefix: dev-
+nameSuffix: -dev
 
 resources:
   - dbclaim-pvc.yaml
