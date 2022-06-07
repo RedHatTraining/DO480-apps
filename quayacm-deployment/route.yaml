@@ -5,9 +5,9 @@ metadata:
     app: budget-app
     name: budget-app
   name: budget-app
-  namespace: budget-app
+  namespace: budget-app-dev
 spec:
-  host: budget.apps.ocp4-mng.example.com
+  host: budget.apps.ocp4.example.com
   path: "/"
   to:
     kind: Service

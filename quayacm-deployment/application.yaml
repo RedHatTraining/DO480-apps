@@ -3,8 +3,8 @@ kind: Application
 metadata:
   annotations:
     apps.open-cluster-management.io/deployables: ''
-  name: budget-app
-  namespace: budget-app
+  name: budget-app-dev
+  namespace: budget-app-dev
 spec:
   componentKinds:
     - group: apps.open-cluster-management.io

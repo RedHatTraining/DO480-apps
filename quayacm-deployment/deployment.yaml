@@ -5,7 +5,7 @@ metadata:
   labels:
     app: budget-app
     name: budget-app
-  namespace: budget-app
+  namespace: budget-app-dev
 spec:
   replicas: 1
   selector:
@@ -19,11 +19,9 @@ spec:
         name: budget-app
     spec:
       containers:
-      - image: central-quay-registry.apps.ocp4.example.com/finance/budget-app:1.0
+      - image: IMAGE_NAME
         name: budget-app
         ports:
         - containerPort: 8080
           name: budget-app
-      imagePullSecrets:
-              - name: finance-prod-deployer-pull-secret
 ---
