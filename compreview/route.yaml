@@ -1,0 +1,20 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: hello-app
+  labels:
+    app: hello-app
+    name: hello-app
+  namespace: compreview-install
+spec:
+  host: hello-app.apps.ocp4.example.com
+  subdomain: ''
+  to:
+    kind: Service
+    name: hello-app
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
+---
