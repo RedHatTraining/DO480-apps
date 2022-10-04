@@ -19,7 +19,7 @@ spec:
         name: budget-app
     spec:
       containers:
-      - image: IMAGE_NAME
+      - image: mysql-80:156
         name: budget-app
         ports:
         - containerPort: 8080
